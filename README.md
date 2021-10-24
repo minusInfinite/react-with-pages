@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Portfolio using React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repo is a revisit of creating my [Portfolio](https://github.com/minusInfinite/minusinfinite.github.io) using [React](https://reactjs.org/)
 
-## Available Scripts
+Live Version - <https://minusinfinite.github.io/react-with-pages>
 
-In the project directory, you can run:
+There are a few differences between my current Portfolio and the React one.
 
-### `yarn start`
+Rather than going to an anchor on the document, the Navigation links act like tabs. The active tab will display the bottom border used when you hover over the link.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![Navagation Example](/md/nav.png)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Clicking on a tab will render the context for the selected area.
 
-### `yarn test`
+Clicking on **Projects** will look the same but the elements are rendered using a reuseable Card component.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This made the React code a lot clear and better to understand the flow.
 
-### `yarn build`
+```javascript
+export default function Card(props) {
+    return (
+        <div className="card">
+            <figure>
+                <a href={props.projectLink} rel="noreferrer" target="_blank">
+                    <img
+                        src={props.projectImg}
+                        alt={props.imgAlt}
+                        title={props.imgTitle}
+                    />
+                </a>
+                <figcaption>
+                    {props.projectcaption}
+                    <a
+                        href={props.projectSource}
+                        rel="noreferrer"
+                        target="_blank">
+                        Github
+                    </a>
+                </figcaption>
+            </figure>
+        </div>
+    )
+}
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+While the task asked for a "Contact form" I don't feel like a modern portfolio would need one, unless you have an active newsletter you would like someone to subscribe to.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The **Social Links** tab gives a little more details on what I intend for each link to provide functionality-wise.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Development
 
-### `yarn eject`
+This project uses Yarn 2 - <https://yarnpkg.com/> - you may need to run `yarn install` twice for this repo to install as expected.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Thoughts
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+In proceeding with this project I've found I'm not a fan of the methodology of React and how granular it can get but I believe I've become to understand why it has been so liked.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I found for this project, starting with an existing Website and design and having to break it down into components, did make the process easier. Maybe with time, it will become more familiar.
