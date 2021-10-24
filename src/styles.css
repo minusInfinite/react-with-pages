@@ -172,6 +172,11 @@ footer {
     text-align: center;
 }
 
+footer a {
+    text-decoration: underline;
+    color: azure;
+}
+
 @media screen and (max-width: 40em) {
     nav {
         display: flex;
