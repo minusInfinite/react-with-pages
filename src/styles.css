@@ -149,6 +149,15 @@ section h2 {
     padding-bottom: 1rem;
 }
 
+#social-links form {
+    display: flex;
+    flex-direction: column;
+}
+
+#social-links form input {
+    margin: 0.8rem;
+}
+
 footer {
     position: sticky;
     background: linear-gradient(

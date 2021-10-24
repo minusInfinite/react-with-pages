@@ -1,4 +1,44 @@
+import React, { useState } from "react"
+
+function validateEmail(email) {
+    const re =
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    return re.test(String(email).toLowerCase())
+}
+
 export default function Contacts() {
+    const [email, setEmail] = useState("")
+    const [name, setName] = useState("")
+    const [errorMessage, setErrorMessage] = useState("")
+
+    const handleInputChange = (e) => {
+        const { target } = e
+        const inputType = target.name
+        const inputValue = target.value
+
+        if (inputType === "email") {
+            if (inputValue.trim() === "") {
+                setErrorMessage("Email is Required")
+            }
+            setEmail(inputValue)
+        } else if (inputType === "name") {
+            setName(inputValue)
+        }
+    }
+
+    const handleFormSubmit = (e) => {
+        e.preventDefault()
+
+        if (!validateEmail(email)) {
+            setErrorMessage("Email is invalid")
+            return
+        } else {
+            setErrorMessage("Thanks for joining")
+        }
+
+        setEmail("")
+        setName("")
+    }
     return (
         <section id="social-links">
             <h2>Socials</h2>
@@ -46,6 +86,39 @@ export default function Contacts() {
                     I also occationaly write reviews and commentry on other
                     interests here.
                 </p>
+            </div>
+            <div className="social-link">
+                <p>Sign-up to my news letter</p>
+                <form className="form">
+                    <label>
+                        Name
+                        <input
+                            value={name}
+                            name="name"
+                            onChange={handleInputChange}
+                            type="text"
+                        />
+                    </label>
+                    <label>
+                        Email
+                        <input
+                            value={email}
+                            name="email"
+                            onBlur={handleInputChange}
+                            onChange={handleInputChange}
+                            type="email"
+                            required
+                        />
+                    </label>
+                    <button type="button" onClick={handleFormSubmit}>
+                        Submit
+                    </button>
+                </form>
+                {errorMessage && (
+                    <div>
+                        <p className="error-text">{errorMessage}</p>
+                    </div>
+                )}
             </div>
         </section>
     )
