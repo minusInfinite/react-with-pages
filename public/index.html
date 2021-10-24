@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <script defer src="https://use.fontawesome.com/releases/v5.15.3/js/brands.js"
+    integrity="sha384-oEE/PrsvhwsuT1MjC4sgnz39CQ84HoPt8jwH0RLyJDdDOKulN+UEbm9IgJW0aTu5"
+    crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.15.3/js/fontawesome.js"
+    integrity="sha384-hD97VKS04Rv8VYShf782apVZOVP6bVH/ubzrWXIIbKOwnD6gsDIcB29K03FL1A9J"
+    crossorigin="anonymous"></script>
+  <noscript>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </noscript>
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,12 +31,123 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>Porfolio - Ashley Mann</title>
+</head>
+
+<body>
+  <noscript>
+    <main>
+      <header>
+        <h1>Porfolio - Ashley Mann</h1>
+        <nav>
+          <a href="#about-me">About Me</a>
+          <a href="#projects">Projects</a>
+          <a href="#social-links">Social Links</a>
+        </nav>
+      </header>
+      <section id="about-me">
+        <h2>About Me</h2>
+        <div class="about-me">
+          <img class=".avatar" src="./assets/images/avatar_blue_2021.png" />
+          <p>
+            Hi, My name is Ashley, also known as minusInfinite. I've
+            had a fair long history of creating interactive
+            experience but haven't been able to find the time. My
+            previous experience was mostly around the use of a
+            software programme called Flash. It allowed for making
+            animations and interactions that could be used to build
+            really interesting websites. Unfortunately, my career
+            took a more methodical turn and all the fun and time
+            tinkering with webpage and web technology felt like a
+            misuse of my free time.
+          </p>
+          <br />
+          <p>All that said, we'll call this a personal renaissance</p>
+        </div>
+      </section>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects">
+          <div class="card">
+            <figure>
+              <a href="https://nodebbs-demo.herokuapp.com/" target="_blank"><img
+                  src="./assets/images/project-nodebbs.png" alt="image of the nodebbs homepage"
+                  title="The landing page for NodeBBS" /></a>
+              <figcaption>
+                A concept for a classic Buliten Board forum in Node/Express/Handlebars -
+                <a href="https://github.com/minusInfinite/nodebbs" target="_blank">Github</a>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="card">
+            <figure>
+              <a href="https://boot-dev-blog.herokuapp.com/" target="_blank">
+                <img src="./assets/images/devblog.png" alt="image of the devblog homepage"
+                  title="the landing page for a Dev Blog" />
+              </a>
+              <figcaption>
+                A Node/Express/Handlebars blogging Web App -
+                <a href="https://github.com/minusInfinite/devblog" target="_blank">Github</a>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="card">
+            <figure>
+              <a href="https://minusinfinite.id.au/shaztxt" target="_blank">
+                <img src="./assets/images/project-shaztxt - small.png" alt="The Landing page for ShazTXT"
+                  title="The Landing page for ShazTXT" /></a>
+              <figcaption>
+                ShazTXT - Lyric Search with Genius and Youtube APIs -
+                <a href="https://github.com/minusInfinite/project-1">Github</a>
+              </figcaption>
+            </figure>
+          </div>
+          <div class="card">
+            <figure>
+              <a href="https://minusinfinite.github.io/weather-dashboard/">
+                <img src="./assets/images/weather_dashboard.png" alt="Landing page for my Weather Dashboard"
+                  title="Landing page for my Weather Dashboard" /></a>
+              <figcaption>A Weather Dashboard using OpenWeatherMap.org - <a
+                  href="https://github.com/minusInfinite/weather-dashboard">Github</a></figcaption>
+            </figure>
+          </div>
+          <div class="card">
+            <figure>
+              <a href="https://github.com/minusInfinite/employee-managment-cli">
+                <img src="./assets/images/emp-man.png" title="link to the Github employee-managment-cli" /></a>
+              <figcaption>A fun little CLI that could be used to manage a small team - Click the Image for
+                Github</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section id="social-links">
+        <h2>Socials</h2>
+        <ul>
+          <li>
+            <a href="https://www.twitter.com/minusinfinite" target="_blank"><i class="fab fa-twitter fa-3x"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/ashley-minusinfinite-mann/" target="_blank"><i
+                class="fab fa-linkedin-in fa-3x"></i></a>
+          </li>
+          <li>
+            <a href="https://github.com/minusInfinite" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+          </li>
+          <li>
+            <a href="https://minusInfinite.net" target="_blank"><i class="fab fa-blogger-b fa-3x"></i></i></a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <h2>Made by minusInfinite</h2>
+    </footer>
+  </noscript>
+  <main id="root">
+
+  </main>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -39,5 +157,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>

@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Lato&display=swap");
+
+:root {
+    --base-color: 0, 38, 71;
+    --alt-color: 240, 255, 255;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100vh;
+    background: fixed no-repeat
+        linear-gradient(
+            rgba(var(--base-color), 0.8) 0%,
+            rgba(var(--base-color), 0.4) 100%
+        );
+    color: azure;
+    font-family: "Nunito Sans", "Lato", sans-serif;
+    overflow-x: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(
+        rgba(var(--base-color), 0.9) 0%,
+        rgba(var(--base-color), 0.6) 100%
+    );
+    width: 100%;
+    margin-bottom: 1.15rem;
+    text-align: center;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end;
+    min-width: 100vw;
+    margin: 2rem auto;
+}
+
+nav a {
+    flex: 1 0 0;
+    text-decoration: none;
+    color: azure;
+    font-size: 1.5rem;
+    margin: 0.8rem 1rem;
+    max-width: 100%;
+    border-bottom: 0.2rem solid transparent;
+    border-bottom: 0.2rem solid rgba(0, 0, 0, 0);
+}
+
+nav a:hover {
+    border-bottom: 0.2rem solid rgb(240, 255, 255, 1);
+}
+
+section {
+    width: 100%;
+    margin: 0 auto;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 1rem;
+}
+
+.about-me {
+    text-align: center;
+    margin: 2rem 0.5rem;
+}
+
+.about-me img {
+    max-width: 10vw;
+    margin: 1.5rem;
+    border-radius: 50%;
+}
+
+.about-me p {
+    font-size: 1.25rem;
+    text-align: left;
+    max-width: 75vw;
+    margin: 0 auto;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    max-width: 90%;
+    margin: 1rem auto;
+}
+
+.projects .card:first-child {
+    flex: 2 0 60%;
+    margin: 1rem;
+}
+
+.projects .card {
+    flex: 1 0 30%;
+    margin: 1rem;
+}
+
+.projects .card img {
+    border: 0.3rem solid azure;
+    border-radius: 0.8rem;
+    width: 100%;
+    height: auto;
+}
+
+.projects .card img:hover {
+    background-color: rgb(var(--base-color));
+    opacity: 0.5;
+}
+
+.projects .card a {
+    text-decoration: underline;
+    color: azure;
+}
+
+.projects .card a:hover {
+    text-decoration-color: rgb(var(--base-color));
+}
+
+#social-links ul {
+    text-align: center;
+}
+
+#social-links li {
+    display: inline;
+    margin: auto 1rem;
+}
+
+footer {
+    position: sticky;
+    background: linear-gradient(
+        rgba(var(--base-color), 0.5),
+        rgba(var(--base-color), 1)
+    );
+    width: 100%;
+    padding-top: 0.3rem;
+    margin-top: 0.8rem;
+    height: 7vh;
+    bottom: 0rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 430px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+}
