@@ -8,7 +8,10 @@ export default function About() {
                 <img
                     className=".avatar"
                     alt="avatar"
-                    src="./assets/images/avatar_blue_2021.png"
+                    src={
+                        process.env.PUBLIC_URL +
+                        "/assets/images/avatar_blue_2021.png"
+                    }
                 />
                 <p>
                     Hi, My name is Ashley, also known as minusInfinite. I've had

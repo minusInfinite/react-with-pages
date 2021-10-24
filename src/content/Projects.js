@@ -2,10 +2,11 @@ import React from "react"
 import Card from "../components/Card"
 
 export default function Projects() {
+    const PUBLIC = process.env.PUBLIC_URL
     const projects = [
         {
             projectLink: "https://nodebbs-demo.herokuapp.com/",
-            projectImg: "./assets/images/project-nodebbs.png",
+            projectImg: PUBLIC + "/assets/images/project-nodebbs.png",
             imgAlt: "nodebbs homepage",
             imgTitle: "The landing page for NodeBBS",
             projectcaption:
@@ -14,7 +15,7 @@ export default function Projects() {
         },
         {
             projectLink: "https://boot-dev-blog.herokuapp.com/",
-            projectImg: "./assets/images/project-devblog.png",
+            projectImg: PUBLIC + "/assets/images/project-devblog.png",
             imgAlt: "devblog homepage",
             imgTitle: "the landing page for a Dev Blog",
             projectcaption: "A Node/Express/Handlebars blogging Web App -",
@@ -22,7 +23,7 @@ export default function Projects() {
         },
         {
             projectLink: "https://minusinfinite.id.au/shaztxt",
-            projectImg: "./assets/images/project-shaztxt-small.png",
+            projectImg: PUBLIC + "/assets/images/project-shaztxt-small.png",
             imgAlt: "The Landing page for ShazTXT",
             imgTitle: "The Landing page for ShazTXT",
             projectcaption:
@@ -31,7 +32,7 @@ export default function Projects() {
         },
         {
             projectLink: "https://minusinfinite.github.io/weather-dashboard/",
-            projectImg: "./assets/images/project-weather_dashboard.png",
+            projectImg: PUBLIC + "/assets/images/project-weather_dashboard.png",
             imgAlt: "Landing page for my Weather Dashboard",
             imgTitle: "Landing page for my Weather Dashboard",
             projectcaption:
@@ -41,7 +42,7 @@ export default function Projects() {
         {
             projectLink:
                 "https://github.com/minusInfinite/employee-managment-cli",
-            projectImg: "./assets/images/project-emp-man.png",
+            projectImg: PUBLIC + "/assets/images/project-emp-man.png",
             imgAlt: "link to the Github employee-managment-cli",
             imgTitle: "link to the Github employee-managment-cli",
             projectcaption:
